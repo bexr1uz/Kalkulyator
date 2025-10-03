@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kalkulyator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Kalkulyator</h1>
+	<form>
+		<input id="num1" type="text" placeholder="sonni kiriting">
+		<input id="num2" type="text" placeholder="sonni kiriting">
+		<input id="result" readonly="readonly" disabled>
+	</form>
+
+	<div class="buttons">
+		<button onclick="add()">+</button>
+		<button onclick="del()">-</button>
+		<button onclick="mult()">*</button>
+		<button onclick="sub()">/</button>
+		<button onclick="power()">xʸ</button>
+		<button onclick="mod()">%</button>
+		<button onclick="sqrt()">√</button>
+		<button onclick="clearInputs()">Clear</button>
+	</div>
+
+	<script  src="app.js"></script>
+</body>
+</html>
