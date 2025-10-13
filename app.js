@@ -1,46 +1,21 @@
-function add(){
-     let num1 = Number(document.getElementById("num1").value);
-	 let num2 = Number(document.getElementById("num2").value);
-	 document.getElementById("result").value = num1+num2;
+function calc() {
+    let son1 = Number(document.getElementById("num1").value);
+    let son2 = Number(document.getElementById("num2").value);
+    let sign = document.getElementById("sel").value;
+    let result;
+
+    if (sign == "+") result = son1 + son2;
+    else if (sign == "-") result = son1 - son2;
+    else if (sign == "*") result = son1 * son2;
+    else if (sign == "/") result = son2 !== 0 ? son1 / son2 : "0 ga bo‘linmaydi!";
+    else if (sign == "%") result = son1 % son2;
+    else if (sign == "^") result = Math.pow(son1, son2);
+
+    document.getElementById("res").innerHTML = "Natija: " + result;
 }
 
-function del(){
-	 let num1 = Number(document.getElementById("num1").value);
-	 let num2 = Number(document.getElementById("num2").value);
-	 document.getElementById("result").value = num1-num2;
-}
-
-function mult(){
-	 let num1 = Number(document.getElementById("num1").value);
-	 let num2 = Number(document.getElementById("num2").value);
-     document.getElementById("result").value = num1*num2;
-}
-
-function sub(){
-	let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-     document.getElementById("result").value = num1/num2;
-}
-
-function power(){
-     let num1 = Number(document.getElementById("num1").value);
-     let num2 = Number(document.getElementById("num2").value);
-     document.getElementById("result").value = Math.pow(num1, num2);
-}
-
-function mod(){
-	let num1 = Number(document.getElementById("num1").value);
-	let num2 = Number(document.getElementById("num2").value);
-	document.getElementById("result").value = num1 % num2;
-}
-
-function sqrt(){
-     let num1 = Number(document.getElementById("num1").value);
-	 document.getElementById("result").value = Math.sqrt(num1);
-}
-
-function clearInputs(){
+function clearInputs() {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
-    document.getElementById("result").value = "";
+    document.getElementById("res").innerHTML = "Natija:";
 }

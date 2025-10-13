@@ -1,42 +1,40 @@
 body {
-	font-family: Arial, sans-serif;
-	background: #f9f9f9;
-	text-align: center;
-	margin-top: 50px;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  text-align: center;
+  margin-top: 50px;
 }
 
 h1 {
-	color: #333;
+  color: #333;
 }
 
-input {
-	padding: 8px;
-	width: 180px;
-	font-size: 16px;
-	margin: 5px;
-}
-
-#result {
-	background: #eee;
-}
-
-.buttons {
-	margin-top: 15px;
+input, select {
+  padding: 8px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 button {
-	padding: 10px 15px;
-	margin: 3px;
-	font-size: 16px;
-	cursor: pointer;
-	display: inline-block;
-	border: none;
-	border-radius: 5px;
-	color: #fff;
-	background: #3498db;
-	transition: 0.2s;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
-	background: #2980b9;
+  background: #2980b9;
+}
+
+#res {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #444;
 }
