@@ -1,21 +1,29 @@
-function calc() {
-    let son1 = Number(document.getElementById("num1").value);
-    let son2 = Number(document.getElementById("num2").value);
-    let sign = document.getElementById("sel").value;
-    let result;
+let disp = document.getElementById("display");
 
-    if (sign == "+") result = son1 + son2;
-    else if (sign == "-") result = son1 - son2;
-    else if (sign == "*") result = son1 * son2;
-    else if (sign == "/") result = son2 !== 0 ? son1 / son2 : "0 ga bo‘linmaydi!";
-    else if (sign == "%") result = son1 % son2;
-    else if (sign == "^") result = Math.pow(son1, son2);
-
-    document.getElementById("res").innerHTML = "Natija: " + result;
+function inputVal(val) {
+    if (disp.innerHTML === "0") {
+        disp.innerHTML = val;
+    } else {
+        disp.innerHTML += val;
+    }
 }
 
-function clearInputs() {
-    document.getElementById("num1").value = "";
-    document.getElementById("num2").value = "";
-    document.getElementById("res").innerHTML = "Natija:";
+function clearDisplay() {
+    disp.innerHTML = "0";
+}
+
+function calc() {
+    let exp = disp.innerHTML;
+
+    if (exp.includes("^")) {
+        let parts = exp.split("^");
+        disp.innerHTML = Math.pow(Number(parts[0]), Number(parts[1]));
+        return;
+    }
+
+    try {
+        disp.innerHTML = eval(exp);
+    } catch {
+        disp.innerHTML = "Xato!";
+    }
 }
